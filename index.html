@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Калькулятор</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<h1>Калькулятор личных доходов</h1>
+		<div class="inputs-block">
+			<div class="inputs-block-column">
+				<h2>Доход в месяц</h2>
+				<div class="inputs-wrapper">
+					<input type="number" placeholder="Зарплата" id="income-salary" class="input">
+					<input type="number" placeholder="Фриланс" id="income-freelance" class="input">
+					<input type="number" placeholder="Доп. доход" id="income-extra-1" class="input">
+					<input type="number" placeholder="Доп. доход" id="income-extra-2" class="input">
+
+				</div>
+			</div>
+			<div class="inputs-block-column">
+				<h2>Обязательные расходы</h2>
+				<div class="inputs-wrapper">
+					<input type="number" placeholder="Аренда квартиры" id="costs-flat" class="input">
+					<input type="number" placeholder="ЖКХ" id="income-house-services" class="input">
+					<input type="number" placeholder="Транспорт" id="income-transport" class="input">
+					<input type="number" placeholder="Кредиты" id="income-credit" class="input">
+				</div>
+			</div>
+			<div class="inputs-block-column">
+				<div class="total-numb">
+					<h2>Доступно в месяц (без копилки):</h2>
+					<input type="number" class="total" id="total-month" value="0" readonly>
+				</div>
+				<div class="total-numb">
+					<h2>Доступно в день:</h2>
+					<input type="number" class="total" id="total-day" value="0" readonly>
+				</div>
+				<div class="total-numb">
+					<h2>Доступно за год:</h2>
+					<input type="number" class="total" id="total-year" value="0" readonly>
+				</div>
+			</div>
+		</div>
+		<div class="range-block">
+			<h2>Копилка (сколько откладываем?)</h2>
+			<div class="range-wrapper">
+				<input type="range" min="0" max="100" value="0" id="money-box-range">
+			</div>
+			<div><span id="total-precents">0</span>%</div>
+		</div>
+		<div class="result-block">
+			<div class="total-numb">
+				<h2>Копим:</h2>
+				<input type="number" id="accumulation" value="0" readonly>
+			</div>
+			<div class="total-numb">
+				<h2>Тратим:</h2>
+				<input type="number" id="spend" value="0" readonly>
+			</div>
+		</div>
+	</div>
+
+	<script src="main.js"></script>
+</body>
+
+</html>
