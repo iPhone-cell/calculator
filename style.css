@@ -1,6 +1,13 @@
 body {
 	background-color: #e5e5e5;
-	padding: 115px 162px 115px 162px;
+	padding: 50px 0 50px 0;
+}
+
+.main-wrapper {
+	max-width: 1170px;
+	padding: 0 15px;
+	margin: 0 auto;
+	overflow-x: hidden;
 }
 
 .main-wrapper h1 {
@@ -27,7 +34,7 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
 	-moz-appearance: textfield;
-  }
+}
 
 input[type="number"] {
 	height: 53px;
@@ -44,6 +51,7 @@ input[type="number"] {
 	display: flex;
 	justify-content: flex-start;
 	margin-bottom: 60px;
+	flex-wrap: wrap;
 }
 
 .inputs-wrapper {
@@ -82,6 +90,7 @@ input.total,
 .result-block {
 	display: flex;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .result-block .total-numb {
@@ -99,4 +108,43 @@ input.total,
 
 #money-box-range {
 	background-color: #000;
+}
+
+
+@media (max-width: 1005px) {
+	.inputs-block-column:last-child {
+		margin-left: 0;
+		display: flex;
+		justify-content: space-between;
+		max-width: 1000px;
+		width: 100%;
+		margin-top: 20px;
+		padding: 0 15px;
+		flex-wrap: wrap;
+	}
+	.inputs-block-column:last-child .total-numb {
+		margin-right: 20px;
+		margin-bottom: 30px;
+	}
+}
+
+@media (max-width: 645px) {
+	input[type="number"] {
+		width: 400px;
+	}
+	.inputs-block-column {
+		margin-bottom: 20px;
+	}
+}
+
+@media (max-width: 510px) {
+	input[type="number"] {
+		width: 300px;
+	}
+}
+
+@media (max-width: 360px) {
+	input[type="number"] {
+		width: 255px;
+	}
 }
